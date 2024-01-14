@@ -30,9 +30,7 @@ const Joke = () => {
                 const shareContent = {
                     title: 'Check out this joke!',
                     text: joke.type === 'twopart' ? `${joke.setup} 
-                    ${joke.delivery}   
-                    'https://mem-volodymyrs-projects-5bb2b7c6.vercel.app/'
-                    ` : joke.joke + '   https://mem-volodymyrs-projects-5bb2b7c6.vercel.app/' 
+                    ${joke.delivery}` : joke.joke  
                     ,
                     txt: 'https://mem-volodymyrs-projects-5bb2b7c6.vercel.app/'
                 };
