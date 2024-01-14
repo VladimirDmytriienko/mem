@@ -26,7 +26,7 @@ const Joke = () => {
     };
 
     return (
-        <div className="m-4 p-6 max-w-md  bg-gray-100 rounded-md shadow-md overflow-hidden">
+        <div className="m-4 p-6  bg-gray-100 rounded-md shadow-md overflow-hidden ">
             <div className="text-center">
                 <button
                     className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300"

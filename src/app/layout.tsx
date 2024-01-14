@@ -18,19 +18,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className} >
-        <nav className="bg-gray-800 m-4 p-4 text-white  rounded-md">
-          <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">Mem Generator</h1>
-            <div className="flex space-x-4">
-              <Link href="/chuck" className="hover:text-gray-300">
-                Chuck Norris Joke
-              </Link>
-              <Link href="/joke" className="hover:text-gray-300">
-                Random Joke
-              </Link>
+        <div className="w-full p-4">
+          <nav className=" bg-gray-800 w-full p-4 text-white  rounded-md ">
+            <div className="flex items-center justify-between">
+              <h1 className="text-2xl font-bold">
+                <Link href="/">
+                Mem Generator
+                </Link></h1>
+              <div className="flex space-x-4">
+                <Link href="/chuck" className="hover:text-gray-300">
+                  Chuck Norris Joke
+                </Link>
+                <Link href="/joke" className="hover:text-gray-300">
+                  Random Joke
+                </Link>
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
+
         {children}
       </body>
     </html>
