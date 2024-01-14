@@ -29,8 +29,12 @@ const Joke = () => {
             if (navigator.share) {
                 const shareContent = {
                     title: 'Check out this joke!',
-                    text: joke.type === 'twopart' ? `${joke.setup} ${joke.delivery}` : joke.joke,
-                    url: 'https://mem-volodymyrs-projects-5bb2b7c6.vercel.app/'
+                    text: joke.type === 'twopart' ? `${joke.setup} 
+                    ${joke.delivery}   
+                    'https://mem-volodymyrs-projects-5bb2b7c6.vercel.app/'
+                    ` : joke.joke + '   https://mem-volodymyrs-projects-5bb2b7c6.vercel.app/' 
+                    ,
+                    txt: 'https://mem-volodymyrs-projects-5bb2b7c6.vercel.app/'
                 };
 
                 navigator.share(shareContent)
