@@ -4,8 +4,15 @@ import { useState } from 'react';
 
 import { Button } from "@/components/ui/button"
 
+interface Joke {
+    type: string;
+    setup?: string;
+    delivery?: string;
+    joke?: string;
+}
+
 const Joke = () => {
-    const [joke, setJoke] = useState(null);
+    const [joke, setJoke] = useState<Joke | null>(null);
 
     const fetchJoke = async () => {
         try {
@@ -17,19 +24,21 @@ const Joke = () => {
             console.error('Error fetching or processing joke:', error);
         }
     };
-
     const handleShare = () => {
-        // You can implement the logic to share the joke here
-        if (navigator.share) {
-            navigator.share({
-                title: 'Check out this joke!',
-                text: joke.type === 'twopart' ? `${joke.setup} ${joke.delivery}` : joke.joke,
-            })
-                .then(() => console.log('Successfully shared'))
-                .catch((error) => console.error('Error sharing:', error));
-        } else {
-            console.warn('Web Share API not supported');
-            // You can provide a fallback sharing method for browsers that don't support Web Share API
+        if (joke) {
+            if (navigator.share) {
+                const shareContent = {
+                    title: 'Check out this joke!',
+                    text: joke.type === 'twopart' ? `${joke.setup} ${joke.delivery}` : joke.joke,
+                };
+
+                navigator.share(shareContent)
+                    .then(() => console.log('Successfully shared'))
+                    .catch((error) => console.error('Error sharing:', error));
+            } else {
+                console.warn('Web Share API not supported');
+               
+            }
         }
     };
 
