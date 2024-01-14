@@ -30,17 +30,19 @@ const Joke = () => {
                 const shareContent = {
                     title: 'Check out this joke!',
                     text: joke.type === 'twopart' ? `${joke.setup} ${joke.delivery}` : joke.joke,
+                    url: 'https://mem-j6xkq4ddp-volodymyrs-projects-5bb2b7c6.vercel.app/', // ваша ссылка
                 };
-
+    
                 navigator.share(shareContent)
                     .then(() => console.log('Successfully shared'))
                     .catch((error) => console.error('Error sharing:', error));
             } else {
                 console.warn('Web Share API not supported');
-               
+              
             }
         }
     };
+    
 
     const renderJoke = () => {
         if (!joke) {
