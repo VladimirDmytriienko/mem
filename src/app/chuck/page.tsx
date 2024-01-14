@@ -17,7 +17,7 @@ export default function MemPage() {
       <div className="bg-gray-100 p-8 rounded shadow-md text-center">
         <h1 className="text-3xl font-bold mb-6 text-blue-500">Chuck Norris Joke Generator</h1>
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 focus:outline-none focus:shadow-outline-blue"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold mb-4 py-2 px-4 rounded transition duration-300 focus:outline-none focus:shadow-outline-blue"
           onClick={fetchMemData}
         >
           Get a Joke

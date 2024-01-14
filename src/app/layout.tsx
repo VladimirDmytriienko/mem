@@ -23,7 +23,7 @@ export default function RootLayout({
             <div className="flex items-center justify-between">
               <h1 className="text-2xl font-bold">
                 <Link href="/">
-                Mem Generator
+                Mem Nastik
                 </Link></h1>
               <div className="flex space-x-4">
                 <Link href="/chuck" className="hover:text-gray-300">
